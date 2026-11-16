@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, follow" />
     <meta name="referrer" content="no-referrer" />
-    <meta http-equiv="refresh" content="0; url=https://2handedcoding.github.io/creativo-96-yearbook/" />
+    <meta http-equiv="refresh" content="0; url=https://promo96.web.app/" />
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; base-uri 'none'" />
     <title>Promo 96 se mudó</title>
     <style>
@@ -13,16 +13,20 @@
       a { color: #d5ff54; }
     </style>
     <script>
+      const oldBase = "/creativo-96-yearbook";
+      const path = (window.location.pathname === oldBase || window.location.pathname.startsWith(oldBase + "/"))
+        ? window.location.pathname.slice(oldBase.length) || "/"
+        : window.location.pathname;
       window.location.replace(
-        "https://2handedcoding.github.io" +
-        window.location.pathname +
+        "https://promo96.web.app" +
+        path +
         window.location.search +
         window.location.hash
       );
     </script>
   </head>
   <body>
-    <p>Promo 96 se mudó. <a href="https://2handedcoding.github.io/creativo-96-yearbook/">Continuar al anuario</a>.</p>
+    <p>Promo 96 se mudó. <a href="https://promo96.web.app/">Continuar al anuario</a>.</p>
   </body>
 </html>
 
